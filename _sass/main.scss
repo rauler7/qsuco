@@ -1,0 +1,179 @@
+@charset "utf-8";
+
+// Customization
+
+// You can easily customize Bulma with your own variables.
+// Just uncomment the following block to see the result.
+
+/*
+// 1. Import the initial variables
+@import "../node_modules/bulma/sass/utilities/initial-variables";
+
+// 2. Set your own initial variables
+// Update the blue shade, used for links
+$blue: #06bcef;
+// Add pink and its invert
+$pink: #ff8080;
+$pink-invert: #fff;
+// Update the sans-serif font family
+$family-sans-serif: "Helvetica", "Arial", sans-serif;
+
+// 3. Set the derived variables
+// Use the new pink as the primary color
+$primary: $pink;
+$primary-invert: $pink-invert;
+
+// 4. Import the rest of Bulma
+*/
+
+@import "../node_modules/bulma/bulma";
+
+.hero .navbar{
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.header-image {
+    background-image: url("../img/backgrounds/background-snacks.png");
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+    background-color: #FFF;
+}
+
+#nav-toggle-state {
+    display: none;
+}  
+#nav-toggle-state:checked ~ .nav-menu {
+    display: block;
+}
+.navbar-item.flex {
+    span.is-hidden-desktop{
+        padding-left: 10px;
+    }
+}
+.navbar-item{
+    img{
+        max-height: none;
+    }
+    .normal-icon{
+        color: #3f4879;
+    }
+}
+.form-container{
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 40px;
+}
+.product-short-details{
+    p{
+        line-height: 1;
+    }
+}
+.email-field{
+    margin-top: 1.5rem;
+    width: 60%;
+}
+.button.is-success{
+    border-color: #FFF;
+    background: #87a5c1;
+    background: -webkit-linear-gradient(left, #87a5c1 0%,#3f497a 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#87a5c1),to(#3f497a));
+    background: -o-linear-gradient(left, #87a5c1 0%,#3f497a 100%);
+    background: linear-gradient(to right, #87a5c1 0%,#3f497a 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87a5c1', endColorstr='#3f497a',GradientType=1 );
+}
+.button.is-success:hover{
+    border-color: #FFF;
+    background: #3f497a;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f497a', endColorstr=' #87a5c1',GradientType=1 );
+}
+.title.is-1 {
+    font-size: 5rem;
+}
+
+
+.footer-icons{
+    margin-right: 10px;
+}
+.navbar-end{
+    .footer-img{
+        img{
+            width: 100px;
+        }
+    }
+}
+#navbar-footer{
+    background-image: url("../img/backgrounds/background-texture.png") !important;
+    background-position: center center;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #1a1a1a !important;
+    .navbar-item{
+        margin: 0 auto;
+    }  
+}
+
+ // Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+    .title.is-1 {
+        font-size: 2rem;
+    }
+    #navbar-footer{
+        .navbar-item{
+            margin: 0 auto;
+            justify-content: center;
+        }
+        .footer-img{
+            width: 100px;
+        }
+    }
+ }
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    .title.is-1 {
+        font-size: 4rem;
+    }
+    #navbar-footer{
+        .navbar-item{
+            margin: 0 auto;
+            justify-content: center;
+        }
+        .footer-img{
+            width: 100px;
+        }
+    }
+ }
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .title.is-1 {
+        font-size: 3rem;
+    }
+    #navbar-footer{
+        .navbar-item{
+            margin: 0 auto;
+            justify-content: center;
+        }
+        .footer-img{
+            width: 100px;
+        }
+    }
+ }
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .title.is-1 {
+        font-size: 4rem;
+    }
+    #navbar-footer{
+        .navbar-item{
+            margin: 0 auto;
+            justify-content: center;
+        }
+        .footer-img{
+            width: 100px;
+        }
+    }
+ }
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+ }
