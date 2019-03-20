@@ -6946,15 +6946,38 @@ label.panel-block {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem; }
 
+@font-face {
+  font-family: 'Gotham Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Gotham Bold"), url("../fonts/GothamBold.woff") format("woff"); }
+
+@font-face {
+  font-family: 'Gotham Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Gotham Bold"), url("../fonts/Gotham-Bold.woff") format("woff"); }
+
+body, html {
+  height: 100%;
+  overflow: hidden; }
+
 .hero .navbar {
   background: rgba(255, 255, 255, 0.7); }
 
-.header-image {
-  background-image: url("../img/backgrounds/background-snacks.png");
-  background-position: center right;
+.header-image-left {
+  background-image: url("../img/backgrounds/background-cover.png");
+  height: 100%;
+  background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: contain;
+  background-size: cover; }
+
+.header-image-right {
+  background-image: url("../img/backgrounds/snacks-hero.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   background-color: #FFF; }
 
 #nav-toggle-state {
@@ -7016,6 +7039,12 @@ label.panel-block {
   #navbar-footer .navbar-item {
     margin: 0 auto; }
 
+.column.header-image-left, .column.header-image-right {
+  min-height: 70vh; }
+
+.columns:not(:last-child) {
+  margin-bottom: 0; }
+
 @media (max-width: 575.98px) {
   .title.is-1 {
     font-size: 2rem; }
@@ -7023,7 +7052,9 @@ label.panel-block {
     margin: 0 auto;
     justify-content: center; }
   #navbar-footer .footer-img {
-    width: 100px; } }
+    width: 100px; }
+  body, html {
+    overflow-y: visible; } }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
   .title.is-1 {
@@ -7032,7 +7063,9 @@ label.panel-block {
     margin: 0 auto;
     justify-content: center; }
   #navbar-footer .footer-img {
-    width: 100px; } }
+    width: 100px; }
+  body, html {
+    overflow-y: visible; } }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
   .title.is-1 {
@@ -7041,7 +7074,9 @@ label.panel-block {
     margin: 0 auto;
     justify-content: center; }
   #navbar-footer .footer-img {
-    width: 100px; } }
+    width: 100px; }
+  body, html {
+    overflow-y: visible; } }
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .title.is-1 {
@@ -7050,4 +7085,6 @@ label.panel-block {
     margin: 0 auto;
     justify-content: center; }
   #navbar-footer .footer-img {
-    width: 100px; } }
+    width: 100px; }
+  body, html {
+    overflow-y: visible; } }
