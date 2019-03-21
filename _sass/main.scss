@@ -32,7 +32,7 @@ $primary-invert: $pink-invert;
     font-family: 'Gotham Bold';
     font-style: normal;
     font-weight: normal;
-    src: local('Gotham Bold'), url('../fonts/GothamBold.woff') format('woff');
+    src: local('Gotham Bold'), url('../fonts/Gotham-Black.woff') format('woff');
 }
 
 
@@ -41,6 +41,12 @@ $primary-invert: $pink-invert;
     font-style: normal;
     font-weight: normal;
     src: local('Gotham Bold'), url('../fonts/Gotham-Bold.woff') format('woff');
+}
+@font-face {
+    font-family: 'Gotham Black';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Gotham Black'), url('../fonts/Gotham-Black.woff') format('woff');
 }
 
 body, html {
@@ -143,6 +149,52 @@ body, html {
 }
 .columns:not(:last-child){
     margin-bottom: 0;
+}
+.qsco-form-container{
+    padding: 40px 70px;
+    img{
+        width: 100px;
+    }
+    h1{
+        font-family: 'Gotham Black';
+        font-size: 30px;
+        line-height: 1;
+        margin-top: 10px;
+    }
+    span{
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        line-height: 1.4;
+        display: inline-block;
+        margin-top: 10px;
+    }
+    .cta-button{
+        margin-top: 20px;
+        width: 70%;
+        button{
+            color: #444C77;
+            background-color: #E6AF41;
+            border-radius: 20px;
+            font-family: 'Gotham Black';
+            font-size: 10px;
+            height: 39px;
+            text-transform: uppercase;
+            padding: 3px 20px;
+            -webkit-box-shadow: 0px 0px 34px -10px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 0px 34px -10px rgba(0,0,0,0.75);
+            box-shadow: 0px 0px 34px -10px rgba(0,0,0,0.75);
+            width: 100%;
+        }
+        button:hover{
+            background-color: #E6AF41;
+        }
+        span{
+            color: #000;
+            font-size: 14px;            
+            font-weight: 300;
+            margin-top: 0;
+        }
+    }
 }
 
  // Extra small devices (portrait phones, less than 576px)
