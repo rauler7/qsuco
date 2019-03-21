@@ -6946,15 +6946,44 @@ label.panel-block {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem; }
 
+@font-face {
+  font-family: 'Gotham Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Gotham Bold"), url("../fonts/Gotham-Black.woff") format("woff"); }
+
+@font-face {
+  font-family: 'Gotham Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Gotham Bold"), url("../fonts/Gotham-Bold.woff") format("woff"); }
+
+@font-face {
+  font-family: 'Gotham Black';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Gotham Black"), url("../fonts/Gotham-Black.woff") format("woff"); }
+
+body, html {
+  height: 100%;
+  overflow: hidden; }
+
 .hero .navbar {
   background: rgba(255, 255, 255, 0.7); }
 
-.header-image {
-  background-image: url("../img/backgrounds/background-snacks.png");
-  background-position: center right;
+.header-image-left {
+  background-image: url("../img/backgrounds/background-cover.png");
+  height: 100%;
+  background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: contain;
+  background-size: cover; }
+
+.header-image-right {
+  background-image: url("../img/backgrounds/snacks-hero.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   background-color: #FFF; }
 
 #nav-toggle-state {
@@ -7016,6 +7045,51 @@ label.panel-block {
   #navbar-footer .navbar-item {
     margin: 0 auto; }
 
+.column.header-image-left, .column.header-image-right {
+  min-height: 70vh; }
+
+.columns:not(:last-child) {
+  margin-bottom: 0; }
+
+.qsco-form-container {
+  padding: 40px 70px; }
+  .qsco-form-container img {
+    width: 100px; }
+  .qsco-form-container h1 {
+    font-family: 'Gotham Black';
+    font-size: 30px;
+    line-height: 1;
+    margin-top: 10px; }
+  .qsco-form-container span {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+    display: inline-block;
+    margin-top: 10px; }
+  .qsco-form-container .cta-button {
+    margin-top: 20px;
+    width: 70%; }
+    .qsco-form-container .cta-button button {
+      color: #444C77;
+      background-color: #E6AF41;
+      border-radius: 20px;
+      font-family: 'Gotham Black';
+      font-size: 10px;
+      height: 39px;
+      text-transform: uppercase;
+      padding: 3px 20px;
+      -webkit-box-shadow: 0px 0px 34px -10px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 0px 34px -10px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 0px 34px -10px rgba(0, 0, 0, 0.75);
+      width: 100%; }
+    .qsco-form-container .cta-button button:hover {
+      background-color: #E6AF41; }
+    .qsco-form-container .cta-button span {
+      color: #000;
+      font-size: 14px;
+      font-weight: 300;
+      margin-top: 0; }
+
 @media (max-width: 575.98px) {
   .title.is-1 {
     font-size: 2rem; }
@@ -7023,7 +7097,9 @@ label.panel-block {
     margin: 0 auto;
     justify-content: center; }
   #navbar-footer .footer-img {
-    width: 100px; } }
+    width: 100px; }
+  body, html {
+    overflow-y: visible; } }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
   .title.is-1 {
@@ -7032,7 +7108,9 @@ label.panel-block {
     margin: 0 auto;
     justify-content: center; }
   #navbar-footer .footer-img {
-    width: 100px; } }
+    width: 100px; }
+  body, html {
+    overflow-y: visible; } }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
   .title.is-1 {
@@ -7041,7 +7119,9 @@ label.panel-block {
     margin: 0 auto;
     justify-content: center; }
   #navbar-footer .footer-img {
-    width: 100px; } }
+    width: 100px; }
+  body, html {
+    overflow-y: visible; } }
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .title.is-1 {
@@ -7050,4 +7130,6 @@ label.panel-block {
     margin: 0 auto;
     justify-content: center; }
   #navbar-footer .footer-img {
-    width: 100px; } }
+    width: 100px; }
+  body, html {
+    overflow-y: visible; } }
