@@ -7046,7 +7046,7 @@ body, html {
     margin: 0 auto; }
 
 .column.header-image-left, .column.header-image-right {
-  min-height: 70vh; }
+  min-height: 85vh; }
 
 .columns:not(:last-child) {
   margin-bottom: 0; }
@@ -7056,6 +7056,7 @@ body, html {
   .qsco-form-container img {
     width: 100px; }
   .qsco-form-container h1 {
+    color: #353C62;
     font-family: 'Gotham Black';
     font-size: 30px;
     line-height: 1;
@@ -7068,27 +7069,49 @@ body, html {
     margin-top: 10px; }
   .qsco-form-container .cta-button {
     margin-top: 20px;
-    width: 70%; }
+    width: 80%; }
     .qsco-form-container .cta-button button {
       color: #444C77;
-      background-color: #E6AF41;
+      background-color: #e6af41;
       border-radius: 20px;
       font-family: 'Gotham Black';
       font-size: 10px;
-      height: 39px;
+      height: 44px;
       text-transform: uppercase;
       padding: 3px 20px;
-      -webkit-box-shadow: 0px 0px 34px -10px rgba(0, 0, 0, 0.75);
-      -moz-box-shadow: 0px 0px 34px -10px rgba(0, 0, 0, 0.75);
-      box-shadow: 0px 0px 34px -10px rgba(0, 0, 0, 0.75);
+      -webkit-box-shadow: 0px 3px 13px 0px rgba(53, 75, 77, 0.42);
+      -moz-box-shadow: 0px 3px 13px 0px rgba(53, 75, 77, 0.42);
+      box-shadow: 0px 3px 13px 0px rgba(53, 75, 77, 0.42);
       width: 100%; }
     .qsco-form-container .cta-button button:hover {
-      background-color: #E6AF41; }
+      background-color: #e6af41; }
     .qsco-form-container .cta-button span {
       color: #000;
       font-size: 14px;
       font-weight: 300;
       margin-top: 0; }
+    .qsco-form-container .cta-button .icon-list svg {
+      width: 100%;
+      padding: 0 5px; }
+  .qsco-form-container .fixed-columns {
+    width: 60%;
+    margin: 0 auto; }
+
+#navbar-footer .navbar-brand img {
+  width: 70px; }
+
+#navbar-footer .navbar-item {
+  font-family: 'Gotham Black';
+  min-width: 127px; }
+
+#navbar-footer a {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  color: #FFF; }
+
+#navbar-footer .footer-img {
+  width: 100px; }
 
 @media (max-width: 575.98px) {
   .title.is-1 {
@@ -7133,3 +7156,8 @@ body, html {
     width: 100px; }
   body, html {
     overflow-y: visible; } }
+
+@media (min-width: 1300px) {
+  .qsco-form-container .cta-button {
+    margin-top: 20px;
+    width: 90%; } }
