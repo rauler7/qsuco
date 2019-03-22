@@ -242,10 +242,42 @@
           </div>
       </section>
   </div>
-  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      var navbarBurger = document.getElementById('navbarBurger');
+      var navbarOpen = false;
+      var rootEl = document.documentElement;
+
+      var $burgers = getAll('.burger');
+
+      navbarBurger.addEventListener('click', function (el) {
+        navbarOpen = !navbarOpen;
+
+        if (navbarOpen) {
+          rootEl.classList.add('bd-is-clipped-touch');
+        } else {
+          rootEl.classList.remove('bd-is-clipped-touch');
+        }
+      });
+
+      function getAll(selector) {
+        return Array.prototype.slice.call(document.querySelectorAll(selector), 0);
+      }
+
+      if ($burgers.length > 0) {
+        $burgers.forEach(function ($el) {
+          $el.addEventListener('click', function () {
+            var target = $el.dataset.target;
+            var $target = document.getElementById(target);
+            $el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+          });
+        });
+      }
+    });
+  </script>
   <script src="js/vendor/modernizr-3.6.0.min.js"></script>  
-  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-  <script defer src="_javascript/main.js"></script>  
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script> 
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P5LPZ64"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
