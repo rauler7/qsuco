@@ -6969,14 +6969,25 @@ body, html {
   overflow: hidden; }
 
 .hero .navbar {
-  background: rgba(255, 255, 255, 0.7); }
+  background: transparent; }
+
+#navbar {
+  position: absolute;
+  width: 100%; }
+
+.has-text-info {
+  color: #444c77 !important; }
 
 .header-image-left {
   background-image: url("../img/backgrounds/background-cover.png");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 400px; }
 
 .header-image-right {
   background-image: url("../img/backgrounds/snacks-hero.jpg");
@@ -7046,24 +7057,29 @@ body, html {
     margin: 0 auto; }
 
 .column.header-image-left, .column.header-image-right {
-  min-height: 85vh; }
+  min-height: 90vh; }
 
 .columns:not(:last-child) {
   margin-bottom: 0; }
 
 .qsco-form-container {
-  padding: 40px 70px; }
+  padding: 0 100px;
+  position: relative; }
+  .qsco-form-container .mark-sv svg {
+    position: absolute;
+    left: 88.6%;
+    top: 59%; }
   .qsco-form-container img {
-    width: 100px; }
+    width: 130px; }
   .qsco-form-container h1 {
     color: #353C62;
     font-family: 'Gotham Black';
-    font-size: 30px;
+    font-size: 43px;
     line-height: 1;
     margin-top: 10px; }
   .qsco-form-container span {
     font-family: 'Roboto', sans-serif;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 1.4;
     display: inline-block;
     margin-top: 10px; }
@@ -7073,10 +7089,10 @@ body, html {
     .qsco-form-container .cta-button button {
       color: #444C77;
       background-color: #e6af41;
-      border-radius: 20px;
+      border-radius: 35px;
       font-family: 'Gotham Black';
-      font-size: 10px;
-      height: 44px;
+      font-size: 18px;
+      height: 67px;
       text-transform: uppercase;
       padding: 3px 20px;
       -webkit-box-shadow: 0px 3px 13px 0px rgba(53, 75, 77, 0.42);
@@ -7087,22 +7103,21 @@ body, html {
       background-color: #e6af41; }
     .qsco-form-container .cta-button span {
       color: #000;
-      font-size: 14px;
+      font-size: 18px;
       font-weight: 300;
-      margin-top: 0; }
+      margin-top: 7px; }
     .qsco-form-container .cta-button .icon-list svg {
       width: 100%;
       padding: 0 5px; }
   .qsco-form-container .fixed-columns {
-    width: 60%;
-    margin: 0 auto; }
+    width: 47%;
+    margin: 5px auto auto auto; }
 
 #navbar-footer .navbar-brand img {
   width: 70px; }
 
 #navbar-footer .navbar-item {
-  font-family: 'Gotham Black';
-  min-width: 127px; }
+  font-family: 'Gotham Black'; }
 
 #navbar-footer a {
   font-family: 'Roboto', sans-serif;
@@ -7113,6 +7128,9 @@ body, html {
 #navbar-footer .footer-img {
   width: 100px; }
 
+.navbar-burger {
+  margin-right: 17px; }
+
 @media (max-width: 575.98px) {
   .title.is-1 {
     font-size: 2rem; }
@@ -7122,7 +7140,21 @@ body, html {
   #navbar-footer .footer-img {
     width: 100px; }
   body, html {
-    overflow-y: visible; } }
+    overflow-y: visible; }
+  .qsco-form-container .fixed-columns {
+    width: 50%; }
+  .qsco-form-container .cta-button {
+    width: 100%; }
+  .qsco-form-container .cta-button button {
+    font-size: 10px; }
+  .qsco-form-container h1 {
+    font-size: 28px; }
+  .column.header-image-left, .column.header-image-right {
+    margin-bottom: -12px; }
+  .header-image-right {
+    background-size: contain; }
+  .header-image-left {
+    margin-bottom: -12px; } }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
   .title.is-1 {
@@ -7133,7 +7165,20 @@ body, html {
   #navbar-footer .footer-img {
     width: 100px; }
   body, html {
-    overflow-y: visible; } }
+    overflow-y: visible; }
+  .qsco-form-container .fixed-columns {
+    width: 50%; }
+  .qsco-form-container .cta-button {
+    width: 100%;
+    margin: 0 auto; }
+    .qsco-form-container .cta-button button {
+      width: 70%; }
+  .qsco-form-container span {
+    padding: 10px 20px; }
+  .header-image-right {
+    background-size: contain; }
+  .header-image-left {
+    margin-bottom: -12px; } }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
   .title.is-1 {
@@ -7144,7 +7189,16 @@ body, html {
   #navbar-footer .footer-img {
     width: 100px; }
   body, html {
-    overflow-y: visible; } }
+    overflow-y: visible; }
+  .qsco-form-container .fixed-columns {
+    width: 50%; }
+  .qsco-form-container .cta-button {
+    width: 100%;
+    margin: 0 auto; }
+    .qsco-form-container .cta-button button {
+      width: 70%; }
+  .qsco-form-container span {
+    padding: 10px 20px; } }
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .title.is-1 {
@@ -7155,9 +7209,31 @@ body, html {
   #navbar-footer .footer-img {
     width: 100px; }
   body, html {
-    overflow-y: visible; } }
-
-@media (min-width: 1300px) {
+    overflow-y: visible; }
   .qsco-form-container .cta-button {
-    margin-top: 20px;
-    width: 90%; } }
+    width: 100%; }
+  .qsco-form-container .cta-button button {
+    font-size: 15px; }
+  .qsco-form-container {
+    padding: 0 60px; }
+  .qsco-form-container span {
+    padding: 10px 20px; } }
+
+@media (min-width: 991px) and (max-width: 1087px) {
+  .qsco-form-container .fixed-columns {
+    width: 25%; }
+  .qsco-form-container .cta-button {
+    width: 100%;
+    margin: 0 auto; }
+    .qsco-form-container .cta-button button {
+      width: 70%; }
+  .qsco-form-container span {
+    padding: 10px 20px; } }
+
+@media (min-width: 1200px) and (max-width: 1350px) {
+  .qsco-form-container .cta-button {
+    width: 100%; } }
+
+@media (min-width: 1351px) {
+  .qsco-form-container .cta-button {
+    width: 80%; } }
