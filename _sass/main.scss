@@ -51,11 +51,13 @@ $primary-invert: $pink-invert;
 
 body, html {
     height: 100%;
-    overflow:hidden;
 }
 
-.hero .navbar{
-    background: transparent;
+.hero-head #navbar{
+    background: transparent !important;
+}
+#navMenuIndex{
+    margin-top: 50px;
 }
 #navbar{
     position: absolute;
@@ -66,20 +68,15 @@ body, html {
 }
 
 .header-image-left{
-    background-image: url("../img/backgrounds/background-cover.png");
-    height: 100%; 
-    background-position: center;
+    background-image: url("../img/backgrounds/background-cover-new.png");
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    height: 400px;
+    min-height: 900px;
+    background-color: #FFF;
 }
 .header-image-right{
     background-image: url("../img/backgrounds/snacks-hero.jpg");
-    height: 100%; 
-    background-position: center;
+    height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #FFF;
@@ -145,7 +142,7 @@ body, html {
     }
 }
 #navbar-footer{
-    background-image: url("../img/backgrounds/background-texture.png") !important;
+    background-image: url("") !important;
     background-position: center center;
     background-repeat: repeat;
     background-attachment: fixed;
@@ -156,14 +153,15 @@ body, html {
     }  
 }
 .column.header-image-left, .column.header-image-right{
-    min-height: 90vh;
+    min-height: 900px;
 }
 .columns:not(:last-child){
     margin-bottom: 0;
 }
 .qsco-form-container{
-    padding: 0 100px;
+    padding: 0px 211px;
     position: relative;
+    height: 100%;
     .mark-sv{
         svg{
             position: absolute;
@@ -172,7 +170,7 @@ body, html {
         }
     }
     img{
-        width: 130px;
+        width: 155px;
     }
     h1{
         color: #353C62;
@@ -180,6 +178,7 @@ body, html {
         font-size: 43px;
         line-height: 1;
         margin-top: 10px;
+        text-align: left;
     }
     span{
         font-family: 'Roboto', sans-serif;
@@ -192,11 +191,11 @@ body, html {
         margin: 20px auto;
         width: 80%;
         button{
-            color: #444C77;
+            color: #2B1D0C;
             background-color:rgba(230, 175, 65, 1);
             border-radius: 35px;
             font-family: 'Gotham Black';
-            font-size: 18px;
+            font-size: 1.3rem;
             height: 67px;
             text-transform: uppercase;
             padding: 3px 20px;
@@ -207,12 +206,19 @@ body, html {
         }
         button:hover{
             background-color:rgba(230, 175, 65, 1);
+            color: #444C77;
         }
         span{
             color: #000;
-            font-size: 18px;            
-            font-weight: 300;
-            margin-top: 7px;
+            font-size: 22px;
+            font-weight: 800;
+            font-family: 'Roboto', sans-serif;
+            margin-top: 0;
+        }
+        i{
+            margin-left: -51px;
+            margin-top: -9px;
+            position: absolute;
         }
         .icon-list{
             svg{
@@ -220,6 +226,12 @@ body, html {
                 padding: 0 5px;
             }
         }
+        .offer{
+           height: 80px; 
+        }
+    }
+    .mc-icon{
+        margin-left: 7px !important;
     }
     .fixed-columns{
         width: 47%;
@@ -270,25 +282,27 @@ body, html {
         width: 50%;
     }
     .qsco-form-container .cta-button {
-        width: 100%;
+        width: 100%;        
     }
     .qsco-form-container .cta-button button{
-        font-size: 10px;
+        font-size: .6rem;
     }
     .qsco-form-container h1 {
         font-size: 28px;
     }
     .column.header-image-left, .column.header-image-right{
         margin-bottom: -12px;
-    }
-    .column.header-image-right{
-     
-    }
+    }    
     .header-image-right{
         background-size: contain;
     }
     .header-image-left{
         margin-bottom: -12px;
+    }
+ }
+ @media (max-width: 450px) {
+    .qsco-form-container .cta-button button{
+        font-size: .5rem;
     }
  }
 // Small devices (landscape phones, 576px and up)
@@ -313,16 +327,13 @@ body, html {
     }    
     .qsco-form-container .cta-button { 
         width: 100%;
-        margin: 0 auto;
+        margin: 30px auto auto auto;
         button{            
-            width: 70%;
+            width: 100%;
         }
     }
     .qsco-form-container span {
         padding: 10px 20px;
-    }
-    .column.header-image-right{
-        
     }
     .header-image-right{       
         background-size: contain;        
@@ -353,7 +364,7 @@ body, html {
     }
     .qsco-form-container .cta-button { 
         width: 100%;
-        margin: 0 auto;
+        margin: 30px auto auto auto;
         button{            
             width: 70%;
         }
@@ -399,9 +410,9 @@ body, html {
     }
     .qsco-form-container .cta-button { 
         width: 100%;
-        margin: 0 auto;
+        margin: 30px auto auto auto;
         button{            
-            width: 70%;
+            width: 100%;
         }
     }
     .qsco-form-container span {
@@ -417,6 +428,6 @@ body, html {
 
  @media (min-width: 1351px){ 
     .qsco-form-container .cta-button {
-        width: 80%;
+        width: 100%;
     }   
  }
